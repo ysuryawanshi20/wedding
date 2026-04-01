@@ -1,0 +1,1005 @@
+.js-fh5co-nav-toggle, #fh5co-logo{
+    display: none;
+}
+
+/* html {
+    scroll-behavior: smooth;
+} */
+
+/* Mobile */
+
+body{
+  /* background-image:url(../images/section3.gif);
+  background-attachment: fixed;
+  background-position: center;
+  backdrop-filter: blur(2px) saturate(1.5); */
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url('../images/section3.gif') center/cover no-repeat;
+
+    z-index: -1;
+}
+
+
+.simply-countdown {
+  /* The countdown */
+  margin-bottom: 2em;
+}
+
+.simply-countdown > .simply-section {
+  /* coutndown blocks */
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  /* background: rgba(241, 78, 149, 0.8); */
+  margin: 0 4px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  position: relative;
+  animation: pulse 1s ease infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 1px;
+  background-color: #d4d4d4;
+  left: 50%;
+  margin-left: 0px;
+}
+@media screen and (max-width: 480px) {
+  .timeline:before {
+    margin-left: -64px;
+  }
+}
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+.timeline > li:before, .timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li > .timeline-panel {
+  width: 40%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  padding: 20px;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+}
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 80px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 81px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+@media screen and (max-width: 480px) {
+  .timeline > li > .timeline-panel {
+    width: 75% !important;
+  }
+  .timeline > li > .timeline-panel:before {
+    top: 30px;
+  }
+  .timeline > li > .timeline-panel:after {
+    top: 31px;
+  }
+}
+.timeline > li > .timeline-badge {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff;
+  width: 160px;
+  height: 160px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -80px;
+  background-color: #999999;
+  z-index: 100;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+@media screen and (max-width: 480px) {
+  .timeline > li > .timeline-badge {
+    width: 60px;
+    height: 60px;
+    margin-left: -20px !important;
+  }
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+.timeline-title {
+  margin-top: 0;
+}
+
+.date {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+
+@media (max-width: 992px) {
+  ul.timeline:before {
+    left: 90px;
+  }
+
+  ul.timeline > li > .timeline-panel {
+    width: calc(100% - 200px);
+    width: -moz-calc(100% - 200px);
+    width: -webkit-calc(100% - 200px);
+  }
+
+  ul.timeline > li > .timeline-badge {
+    left: 15px;
+    margin-left: 0;
+    top: 16px;
+        box-shadow: 0 0 14px -5px #000000;
+  }
+
+  ul.timeline > li > .timeline-panel {
+    float: right;
+  }
+
+  ul.timeline > li > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  ul.timeline > li > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+  }
+}
+
+
+.simply-countdown > .simply-section > div {
+  /* countdown block inner div */
+  display: table-cell;
+  vertical-align: middle;
+  height: 100px;
+  width: 100px;
+}
+
+.simply-countdown > .simply-section .simply-amount,
+.simply-countdown > .simply-section .simply-word {
+  display: block;
+  color: white;
+  /* amounts and words */
+}
+
+.simply-countdown > .simply-section .simply-amount {
+  font-size: 40px;
+  font-weight: 600
+  /* amounts */
+}
+
+.simply-countdown > .simply-section .simply-word {
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  font-size: 12px;
+  /* words */
+}
+
+
+.couple-wrap {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .couple-wrap {
+    width: 100%;
+  }
+}
+
+.heart {
+  position: absolute;
+  top: 4em;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  animation: pulse 1s ease infinite;
+}
+.heart i {
+  font-size: 20px;
+  background: #fff;
+  padding: 20px;
+  color: #F14E95;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  .heart {
+    display: none;
+  }
+}
+
+.couple-half {
+  width: 50%;
+  float: left;
+}
+@media screen and (max-width: 768px) {
+  .couple-half {
+    width: 100%;
+  }
+}
+.couple-half h3 {
+  font-family: "Sacramento", Arial, serif;
+  color: #F14E95;
+  font-size: 30px;
+}
+.couple-half .bride, .couple-half .groom {
+  float: left;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.couple-half .bride img, .couple-half .groom img {
+  width: 150px;
+  height: 150px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+@media screen and (max-width: 480px) {
+  .couple-half .bride, .couple-half .groom {
+    width: 100%;
+    height: 140px;
+  }
+  .couple-half .bride img, .couple-half .groom img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+}
+.couple-half .bride {
+  float: right;
+  margin-right: 5px;
+}
+.couple-half .groom {
+  float: left;
+  margin-left: 5px;
+}
+.couple-half .desc-bride {
+  padding-right: 180px;
+  text-align: right;
+}
+.couple-half .desc-groom {
+  padding-left: 180px;
+  text-align: left;
+}
+@media screen and (max-width: 480px) {
+  .couple-half .bride, .couple-half .groom {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .couple-half .desc-bride {
+    padding-right: 0;
+    text-align: center;
+  }
+  .couple-half .desc-groom {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+
+@media only screen and (max-width: 600px){
+
+    /* .main-outer{
+        overflow: hidden;
+        height: 95dvh
+    } */
+
+    .left-slide{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 40%;
+       
+        transition: 1s ease-in-out;
+        z-index: 4;
+        overflow: hidden;
+       
+    }
+
+    .left-slide img{
+      /* width: 100%; */
+      height: 100%;
+    }
+     .right-slide{
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 60%;
+        
+       
+        transition: 1s ease-in-out;
+        z-index: 4;
+        overflow: hidden;
+ 
+        
+    }
+
+     .right-slide img{
+      /* width: 100%; */
+      height: 100%;
+    }
+
+    .strip-env{
+        position: absolute;
+        top: 0;
+        left: 30%;
+        min-height: 100vh;
+        width: 12%;
+        background: #224a5b;
+        transition: 1.6s ease-in-out;
+        z-index: 4;
+        background-size: cover;
+
+    }
+
+    .stamp{
+        position: absolute;
+        top: 35%;
+        left: 10%;
+
+        width: 200px;
+        transition: 1.5s ease-in-out;
+        z-index: 6;
+        background-size: cover;
+
+    }
+
+   
+    .stamp img{
+        width: 100%;
+    }
+
+   
+
+    .strip-welcome{
+        position: absolute;
+       top: 45%;
+        right: 13%;
+       
+        font-family: "Sacramento", Arial, serif;
+        font-size: 30px;
+        color: #fff;
+        z-index: 6;
+        transition: 1s ease-in-out;
+    }
+
+   
+
+
+    .display-selected-message{
+             display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -100px;
+        left: 0;
+        z-index: 1;
+        
+        width: 100%;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 12px;
+        line-height: 28px;
+        transition: .5s ease-in-out;
+        
+        
+    }
+
+    .display-selected-message-inner{
+       background: #0000007a;
+        margin: 12px;
+        padding: 12px;
+        width: 90%;
+        border-radius: 20px 20px 20px 20px;
+        color: #fff;
+        backdrop-filter: blur(10px) saturate(1.5);
+
+    }
+
+.team-groom-message,  .team-bride-message{
+  display: none;
+}
+
+
+
+    header .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    header h2{
+        margin-bottom: 0px;
+    }
+
+    .banner{
+        color: #fff;
+        background-image:url(../images/img_bg_2.jpg);
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        /* background-attachment: fixed; */
+        height: 100vh;
+        overflow: hidden;
+        
+    }
+    .banner .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgb(0 0 0 / 55%);
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    
+    .banner .pre-title {
+        font-size: 12px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        opacity: 0.7;
+        margin-bottom: 20px;
+        }
+
+                i {
+        font-style: italic;
+        opacity: 0.9;
+        }
+
+    .banner .main-title{
+        font-family: "Sacramento", Arial, serif;
+        font-size: 50px;
+    }
+
+    
+
+    .banner .border-down{
+        background-color: #fff;
+        display: inline-block;
+        width: 140px;
+        height: 1px;
+        margin-bottom: 10px;
+    }
+    .banner .outer-banner{
+        text-align: center;
+        position: relative;
+        
+    }
+
+    .banner .save-the-date {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  /* color: #888; */
+  /* color: #fff; */
+  margin-bottom: 25px;
+}
+
+
+    .banner .sub-title{
+        font-size: 12px;
+        letter-spacing: 3px;
+        /* text-transform: uppercase; */
+        margin-bottom: 15px;
+        margin-bottom: 10px;
+        line-height: 20px;
+    }
+
+
+    .banner .countdown-heading{
+         font-size: 12px;
+        
+        letter-spacing: 3px;
+        /* text-transform: uppercase; */
+        margin-top: 30px;
+    }
+
+    .simply-countdown{
+        margin-bottom: 50px;
+        margin-top: 0px;
+    }
+    
+
+    .banner .choose-side-title{
+        font-size: 13px;
+        
+        letter-spacing: 3px;
+        /* text-transform: uppercase; */
+        /* margin-bottom: 15px; */
+    }
+
+    .banner #clickdown{
+      text-decoration: none;
+      color: #fff;
+    }
+
+
+
+    .banner .team-button-outer{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        margin-bottom: 20px;
+
+    }
+
+    .banner .team-button-outer .team-button{
+        border: 1px solid #fff;
+        border-radius: 30px;
+        padding: 10px 0px;
+        display: inline-block;
+        box-shadow: 0 0 14px -5px;
+        font-size: 13px;
+        width: 150px;
+        letter-spacing: 3px;
+        /* text-transform: uppercase; */
+
+    }
+
+    .banner .banner-disclaimer{
+        font-size: 12px;
+        letter-spacing: 3px;
+        /* text-transform: uppercase; */
+        margin-bottom: 15px;
+    }
+
+
+
+.divider-section{
+padding: 40px;
+}
+
+
+.intro-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: rgb(255 255 255 / 50%);
+text-shadow: 0px 0px 4px #ffffff;
+display: none;
+ 
+
+}
+
+/* TITLE */
+.intro-section .sec-title {
+  font-family: "Sacramento", cursive;
+  font-size: 56px;
+  color: #F14E95;
+  /* color: #fff; */
+  margin-bottom: 10px;
+}
+
+
+
+
+
+/* SUBTITLE */
+.intro-section .sec-sub-title {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #888;
+  /* color: #fff; */
+  margin-bottom: 25px;
+}
+
+/* CONTENT */
+.intro-section .sec-content {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  /* color: #fff; */
+  max-width: 500px;
+  margin: 0 auto;
+  letter-spacing: 0.5px; /* IMPORTANT: reduce from 3px */
+}
+
+/* OPTIONAL DIVIDER (VERY PREMIUM TOUCH) */
+.intro-section .sec-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #e0d5e6;
+  
+  margin: 12px auto 20px;
+}
+
+  .intro-section  .couple-intro {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #888;
+  /* color: #fff; */
+  margin: 50px 0 25px;
+}
+
+
+/* COUPLE NAME */
+.couple-title {
+  /* font-family: "Playfair Display", serif; */
+  font-family: "Sacramento", cursive;
+  font-size: 40px;
+  color: #4c2b55;
+  /* color: #fff; */
+  margin-bottom: 8px;
+  position: relative;
+}
+
+/* subtle underline */
+.couple-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #e0d5e6;
+  
+  margin: 8px auto 0;
+}
+
+
+
+/* DESCRIPTION */
+.couple-description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  /* color: #fff; */
+  margin-top: 12px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+
+
+
+
+
+/* timeline */
+
+
+
+/* TITLE */
+.weddingtimeline{
+    background: rgb(255 255 255 / 50%);
+   text-shadow: 0px 0px 4px #ffffff;
+   display: none;
+}
+
+.weddingtimeline .sec-title {
+  font-family: "Sacramento", cursive;
+  font-size: 40px;
+  color: #f14e95;
+  /* color: #fff; */
+  margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+.weddingtimeline .sec-sub-title {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #888;
+  /* color: #fff; */
+  margin-bottom: 25px;
+}
+
+/* CONTENT */
+.weddingtimeline .sec-content {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  /* color: #fff; */
+  max-width: 500px;
+  margin: 0 auto;
+  letter-spacing: 0.5px; /* IMPORTANT: reduce from 3px */
+}
+
+/* CARD WRAPPER (if inside timeline-content, skip this) */
+.timeline-card {
+  background: #faf7fb;
+  padding: 20px 22px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.timeline-card:hover {
+  transform: translateY(-5px);
+}
+/* TITLE */
+.timeline-title {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  color: #4c2b55;
+  margin-bottom: 6px;
+}
+
+/* DATE + TIME */
+.timeline-meta {
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+/* LOCATION */
+.timeline-location {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 7px;
+  line-height: 25px;
+}
+
+/* LOCATION LINK */
+.timeline-location a {
+  color: #b89cc8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.timeline-location a:hover {
+  text-decoration: underline;
+  color: #4c2b55;
+}
+.timeline-location a::after {
+  content: " →";
+}
+
+/* DESCRIPTION */
+.timeline-dresscode {
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+/* DESCRIPTION */
+.event-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  font-style: italic;
+}
+
+
+/* cocktail */
+.timeline-panel.cocktail-outer {
+  background: rgb(249 92 0 / 12%);
+border-color: rgba(255, 193, 7, 0.3);
+}
+
+/* Mehendi */
+.timeline-panel.mehendi-outer {
+  background: rgba(76, 122, 76, 0.08);
+  border-color: rgba(76, 122, 76, 0.2);
+}
+
+
+
+/* Haldi */
+.timeline-panel.haldi-outer {
+  background: rgba(255, 204, 0, 0.08);
+  border-color: rgba(255, 204, 0, 0.25);
+}
+
+/* Lunch */
+.timeline-panel.lunch-outer {
+  background: rgba(255, 218, 185, 0.15);
+  border-color: rgba(255, 218, 185, 0.3);
+}
+
+/* Wedding */
+.timeline-panel.wedding-outer {
+  background: rgba(139, 92, 246, 0.08);
+  border-color: rgba(139, 92, 246, 0.25);
+}
+
+/* Reception */
+.timeline-panel.reception-outer {
+  background: rgba(255, 182, 193, 0.12);
+  border-color: rgba(255, 182, 193, 0.3);
+}
+
+/* Dinner */
+.timeline-panel.dinner-outer {
+  background: rgba(153, 27, 27, 0.08);
+  border-color: rgba(153, 27, 27, 0.25);
+}
+
+
+
+
+
+/* OPTIONAL ICON (very premium touch) */
+.timeline-title::before {
+
+  margin-right: 8px;
+}
+  
+
+/* Mehendi */
+.timeline-title.mehendi::before {
+  content: "🌿";
+}
+
+/* Haldi */
+.timeline-title.haldi::before {
+  content: "💛";
+}
+
+/* Lunch */
+.timeline-title.lunch::before {
+  content: "🍽️";
+}
+
+/* Wedding */
+.timeline-title.wedding::before {
+  content: "💍";
+}
+
+/* Reception */
+.timeline-title.reception::before {
+  content: "🥂";
+}
+
+/* Dinner */
+.timeline-title.dinner::before {
+  content: "🍷";
+}
+
+
+#confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+
+
+}
+
+/* desktop */
+@media only screen and (min-width: 600px){
+    
+}
+
+
+
